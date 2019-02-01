@@ -1,0 +1,79 @@
+@import "ui.css"; 
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol { list-style:none; } 
+a { text-decoration:none; } 
+a:hover { text-decoration:underline; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; }
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-nav{
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #01450b;
+  color:#fff;
+  &-phone{
+    height: 159px;
+    width: 100%;
+    &-img{
+      width: 332px;
+      height: 68px;
+    }
+  }
+  &-btns{
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    &-item{
+      width: 250px;
+      height: 86px;
+    }
+  }
+}
+.nav-btn-one{
+  background: #327d39;
+  margin-right: 12px;
+  img{
+    width: 34px;
+    height: 49px;
+    display: inline-block;
+    margin-right: 14px;
+  }
+}
+.nav-btn-two{
+  background: #22943a;
+  margin-right: 12px;
+  img{
+    width: 54px;
+    height: 46px;
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+.nav-btn-three{
+  background: #b9d300;
+  img{
+    width: 47px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

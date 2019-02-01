@@ -1,28 +1,52 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
+    <div class="app-nav">
+      <div class="app-nav-phone flex-center">
+        <img src="./assets/app-nav-phone.png" class="app-nav-phone-img">
+      </div>
+      <div class="app-nav-btns">
+        <div class="app-nav-btns-item nav-btn-one flex-center" @click="call">
+          <img src="./assets/icon-phone.png" alt="">
+          <p>预约体验</p>
+        </div>
+        <div class="app-nav-btns-item nav-btn-two flex-center" @click="email">
+          <img src="./assets/icon-chat.png" alt="">
+          <p>悄悄提问</p>
+        </div>
+        <div class="app-nav-btns-item nav-btn-three flex-center" @click="home">
+          <img src="./assets/icon-home.png" alt="">
+          <p>首页</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { Toast } from 'mint-ui';
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+      phonenumber: 4008207156
+    }
+  },
+  methods: {
+    call() {
+      window.location.href = `tel://${this.phonenumber}`
+    },
+    email() {
+      Toast('EMAIL @xxx.com')
+    },
+    home() {
+      this.$router.replace({
+        path:'/'
+      })
+    }
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style src="./common.less" lang="less"></style>
