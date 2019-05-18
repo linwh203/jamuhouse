@@ -4,10 +4,9 @@
       <img src="../assets/logo.png" alt="">
     </div>
     <div class="swipe">
-      <mt-swipe :auto="0">
+      <mt-swipe :auto="3000">
         <mt-swipe-item class="swipe-item"><img src="../assets/banner-1.png" alt=""></mt-swipe-item>
-        <mt-swipe-item class="swipe-item"><img src="../assets/banner-1.png" alt=""></mt-swipe-item>
-        <mt-swipe-item class="swipe-item"><img src="../assets/banner-1.png" alt=""></mt-swipe-item>
+        <mt-swipe-item class="swipe-item"><img src="../assets/banner-2.png" alt=""></mt-swipe-item>
       </mt-swipe>
     </div>
     <div class="section">
@@ -20,7 +19,7 @@
       </div>
       <div class="section-link">
         <div class="section-link-item">
-          <div class="section-link-item-main">
+          <div class="section-link-item-main" @click="goPage('course1')">
             <div class="section-link-item-main-text">
               <h3>JAMU产后修复护理</h3>
               <h4>PRENATAL CARE</h4>
@@ -30,7 +29,7 @@
           <img class="section-link-item-bg" src="../assets/section-bg-1.png" alt="">
         </div>
         <div class="section-link-item">
-          <div class="section-link-item-main">
+          <div class="section-link-item-main" @click="goPage('course2')">
             <div class="section-link-item-main-text">
               <h3>孕产期舒缓芳香疗法</h3>
               <h4>POSTPARTUM CARE</h4>
@@ -40,11 +39,10 @@
            <img class="section-link-item-bg" src="../assets/section-bg-2.png" alt="">
         </div>
         <div class="section-link-item">
-          <div class="section-link-item-main">
+          <div class="section-link-item-main" @click="goPage('course3')">
             <div class="section-link-item-main-text">
               <h3>母乳全段护理</h3>
-              <h4>BREAST MILK</h4>
-              <h4>WHOLE-STAGE NURSING</h4>
+              <h4>BREAST MILK NURSING</h4>
             </div>
             <img class="section-link-item-main-arrow" src="../assets/section-icon-arrow.png">
           </div>
@@ -52,7 +50,7 @@
         </div>
       </div>
     </div>
-    <div class="middle-banner">
+    <div class="middle-banner" @click="goPage('about')">
       <div class="middle-banner-text">
         <h1>JAMU的起源</h1>
         <img src="../assets/section-mid-text-line.png" class="middle-banner-text-line">
@@ -65,12 +63,12 @@
         <h2>ABOUT US</h2>
       </div>
       <div class="section-about">
-        <div class="section-about-item">
+        <div class="section-about-item" @click="goPage('intro')">
           <img src="../assets/section-about-bg-1.png" alt="" class="section-about-item-img">
           <h4>走进JAMU HOUSE</h4>
           <h5>ABOUT JAMU HOUSE</h5>
         </div>
-        <div class="section-about-item">
+        <div class="section-about-item" @click="goPage('specialise')">
           <img src="../assets/section-about-bg-2.png" alt="" class="section-about-item-img">
           <h4>学术中心</h4>
           <h5>ACADEMIC CENTER</h5>
@@ -82,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section padding-bottom" >
       <div class="section-title">
         <h1>爱美之星</h1>
         <h2>STAR OF BEAUTY</h2>
@@ -100,7 +98,7 @@
         </div>
       </div>
     </div>
-        <div class="section">
+    <!-- <div class="section">
       <div class="section-title border-bottom">
         <h1>专家顾问</h1>
         <h2>EXPERT CONSULTANT</h2>
@@ -139,14 +137,28 @@
           <img src="../assets/section-expert-bg.png" class="section-expert-bg-img">
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 // import { Toast } from 'mint-ui';
+import router from '@/router';
+
 
 export default {
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+    goPage(name) {
+      router.push({
+        name: name,
+      })
+    }
+  },
   mounted() {
     // Toast('Hello world!');
   }
@@ -364,5 +376,8 @@ export default {
 }
 .border-bottom{
   border-bottom:2px solid #000;/*no*/ 
+}
+.padding-bottom{
+  margin-bottom: 420px;
 }
 </style>
