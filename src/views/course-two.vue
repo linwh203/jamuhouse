@@ -43,7 +43,7 @@ export default {
   }
 }
 .swipe{
-  height: 430px;
+  height: 370px;
   img{
     height: 100%;
     width: 100%;
@@ -60,7 +60,7 @@ export default {
     width: 194px;
     height: 40px;
     position: absolute;
-    top: 980px;
+    top: 930px;
     left: 0;right: 0;
     margin:auto;
   }
@@ -68,7 +68,7 @@ export default {
     width: 194px;
     height: 40px;
     position: absolute;
-    top: 2282px;
+    top: 2232px;
     left: 0;right: 0;
     margin:auto;
   }

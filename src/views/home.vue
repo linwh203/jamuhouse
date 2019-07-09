@@ -12,7 +12,7 @@
     <div class="section">
       <div class="section-title border-bottom">
         <h1>疗程</h1>
-        <h2>COURSE OF TREATMENT</h2>
+        <h2>OUR TREATMENTS</h2>
       </div>
       <div class="section-text flex-center">
         <img src="../assets/section-text-1.png" alt="">
@@ -22,7 +22,7 @@
           <div class="section-link-item-main" @click="goPage('course1')">
             <div class="section-link-item-main-text">
               <h3>JAMU产后修复护理</h3>
-              <h4>PRENATAL CARE</h4>
+              <h4>JAMU POSTNATAL CARE</h4>
             </div>
             <img class="section-link-item-main-arrow" src="../assets/section-icon-arrow.png">
           </div>
@@ -32,7 +32,8 @@
           <div class="section-link-item-main" @click="goPage('course2')">
             <div class="section-link-item-main-text">
               <h3>孕产期舒缓芳香疗法</h3>
-              <h4>POSTPARTUM CARE</h4>
+              <h4>PRENATAL & POSTNATAL CARE</h4>
+              <!-- <h4>POSTNATAL CARE</h4> -->
             </div>
             <img class="section-link-item-main-arrow" src="../assets/section-icon-arrow.png">
           </div>
@@ -51,10 +52,10 @@
       </div>
     </div>
     <div class="middle-banner" @click="goPage('about')">
-      <div class="middle-banner-text">
+      <!-- <div class="middle-banner-text">
         <h1>JAMU的起源</h1>
         <img src="../assets/section-mid-text-line.png" class="middle-banner-text-line">
-      </div>
+      </div> -->
       <img src="../assets/banner-middle.png" alt="" class="middle-banner-bg">
     </div>
     <div class="section">
@@ -70,8 +71,8 @@
         </div>
         <div class="section-about-item" @click="goPage('specialise')">
           <img src="../assets/section-about-bg-2.png" alt="" class="section-about-item-img">
-          <h4>学术中心</h4>
-          <h5>ACADEMIC CENTER</h5>
+          <h4>专业及安全</h4>
+          <h5>PORFESSIONAL</h5>
         </div>
         <div class="section-about-item">
           <img src="../assets/section-about-bg-3.png" alt="" class="section-about-item-img">
@@ -82,10 +83,10 @@
     </div>
     <div class="section padding-bottom" >
       <div class="section-title">
-        <h1>爱美之星</h1>
-        <h2>STAR OF BEAUTY</h2>
+        <h1>美丽见证</h1>
+        <h2>TESTIMONIALS</h2>
       </div>
-      <div class="section-star">
+      <div class="section-star" @click="goPage('star')">
         <div class="section-star-left">
           <img src="../assets/section-gallery-left-1.png" alt="" class="section-star-left-img">
         </div>
@@ -190,16 +191,20 @@ export default {
     padding:38px 0; 
     h1{
       font-size:30px; /*px*/
+      font-weight: normal;
+      margin-bottom: 10px;
     }
     h2{
-      font-size:36px; /*px*/
+      font-size:33px; /*px*/
+      font-family: Helvetica;
+      font-weight: normal;
     }
   }
   &-text{
-    padding:36px 0 58px;
+    padding:36px 0 85px;
     img{
       width: 540px;
-      height: 140px;
+      height: 96px;
       display: inline-block;
     }
   }
@@ -219,22 +224,24 @@ export default {
         justify-content: flex-end;
         align-items: center;
         &-text{
-          margin: 0 18px 0 0;
+          margin: 0 10px 0 0;
           text-align: right;
           h3{
-            font-size:24px; /*px*/
+            font-size:22px; /*px*/
+            // font-weight: normal;
           }
           h4{
             font-size:20px; /*px*/
             white-space:nowrap;
-            transform: scale(0.8);
-            margin-right:-10%;
+            // transform: scale(0.95);
+            margin-right:0%;
+            // font-weight: normal;
           }
         }
         &-arrow{
           width: 18px;
           height: 56px;
-          margin-right: 28px;
+          margin-right: 20px;
         }
       }
       &-bg{
@@ -265,12 +272,12 @@ export default {
         margin-top: 30px;
         font-size:20px;
         white-space: nowrap;
-        transform: scale(0.7);
+        transform: scale(0.8);
       }
       h5{
         font-size:20px;
         white-space: nowrap;
-        transform: scale(0.7);
+        transform: scale(0.8);
       }
     }
   }

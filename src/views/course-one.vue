@@ -43,7 +43,7 @@ export default {
   }
 }
 .swipe{
-  height: 430px;
+  height: 370px;
   img{
     height: 100%;
     width: 100%;

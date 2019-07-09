@@ -38,7 +38,7 @@ export default {
       window.location.href = `tel://${this.phonenumber}`
     },
     email() {
-      Toast('EMAIL @xxx.com')
+      Toast('EMAIL: service@jamuhouse.cn')
     },
     home() {
       this.$router.replace({
