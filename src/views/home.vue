@@ -164,7 +164,7 @@ export default {
   mounted() {
     const banner = window.localStorage.getItem('banner')
     // console.log(JSON.parse(banner).homeBanner)
-    if(event&&!this.jsonData.homeBanner) {
+    if(banner&&!this.jsonData) {
       this.bannerList = JSON.parse(banner).homeBanner
     }
   }

@@ -20,6 +20,7 @@
 
 <script>
 import navbar from '../components/head'
+import axios from 'axios'
 
 export default {
   components:{
@@ -40,6 +41,26 @@ export default {
     console.log(event)
     if(event&&this.eventData.length<1) {
       this.eventList = JSON.parse(event)
+    }
+  },
+  mounted() {
+    console.log('event mounted')
+    console.log(this.eventList)
+    if(this.eventList.length<1) {
+      console.log('get event.json')
+      axios.get('json/event.json')
+        .then(res=>{
+          this.eventList = res.data
+          window.localStorage.setItem("event",JSON.stringify(res.data))
+        })
+    }
+    window.onpageshow = function() {
+      axios.get('json/event.json')
+        .then(res=>{
+          this.eventList = res.data
+          
+          window.localStorage.setItem("event",JSON.stringify(res.data))
+        })
     }
   }
 }
