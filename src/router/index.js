@@ -8,6 +8,7 @@ const About = () => import('./../views/about.vue')
 const Intro = () => import('./../views/intro.vue')
 const Specialise = () => import('./../views/specialise.vue')
 const Star = () => import('./../views/star.vue')
+const Event = () => import('./../views/event.vue')
 
 const CourseOne = () => import('./../views/course-one.vue')
 const CourseOneOne = () => import('./../views/course-one-one.vue')
@@ -28,6 +29,7 @@ const routes = [
   { path: '/intro', name: 'intro', component: Intro },
   { path: '/specialise', name: 'specialise', component: Specialise },
   { path: '/star', name: 'star', component: Star },
+  { path: '/event', name: 'event', component: Event },
   { path: '/course/1', name: 'course1', component: CourseOne },
   { path: '/course/1/1', name: 'course1-1', component: CourseOneOne },
   { path: '/course/1/2', name: 'course1-2', component: CourseOneTwo },

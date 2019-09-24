@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { Toast } from 'mint-ui';
+// import { Toast } from 'mint-ui';
 
 export default {
   name: 'app',
@@ -38,7 +38,8 @@ export default {
       window.location.href = `tel://${this.phonenumber}`
     },
     email() {
-      Toast('EMAIL: service@jamuhouse.cn')
+      // Toast('EMAIL: service@jamuhouse.cn')
+      location.href = 'http://jamuhouse.mikecrm.com/7vZ0cKO'
     },
     home() {
       this.$router.replace({

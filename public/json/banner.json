@@ -1,0 +1,18 @@
+{
+  "homeBanner": [
+    "img/home/banner-1.png",
+    "img/home/banner-2.png"
+  ],
+  "courseOneBanner": [
+    "img/course1/coursebanner-1.png",
+    "img/course1/coursebanner-2.png"
+  ],
+  "courseTwoBanner": [
+    "img/course2/course2-banner-1.png",
+    "img/course2/course2-banner-2.png"
+  ],
+  "courseThreeBanner": [
+    "img/course3/course3-banner-1.png",
+    "img/course3/course3-banner-2.png"
+  ]
+}

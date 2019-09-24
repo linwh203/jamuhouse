@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div class="home-nav">
+      <navbar hide="about"/>
+    </div>
     <div class="section">
       <img src="../assets/about-us.png" alt="">
       <div class="btn-service" @click="goPage()"><img src="../assets/service.png" alt=""></div>
@@ -10,8 +13,12 @@
 <script>
 // import { Toast } from 'mint-ui';
 import router from '@/router';
+import navbar from '../components/head'
 
 export default {
+  components:{
+    navbar
+  },
   methods: {
     goPage() {
       router.push({
@@ -23,6 +30,16 @@ export default {
 </script>
 
 <style scoped lang="less">
+.home{
+  position: relative;
+  .home-nav{
+    width: 750px;
+    position: absolute;
+    top: 0;
+    z-index: 998;
+    background: #fff;
+  }
+}
 .section{
   margin-bottom: 230px;
   position: relative;

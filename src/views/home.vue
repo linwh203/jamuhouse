@@ -1,12 +1,10 @@
 <template>
   <div class="home">
-    <div class="logo flex-center">
-      <img src="../assets/logo.png" alt="">
-    </div>
+    <navbar />
     <div class="swipe">
       <mt-swipe :auto="3000">
-        <mt-swipe-item class="swipe-item"><img src="../assets/banner-1.png" alt=""></mt-swipe-item>
-        <mt-swipe-item class="swipe-item"><img src="../assets/banner-2.png" alt=""></mt-swipe-item>
+        <mt-swipe-item class="swipe-item" v-for="img in bannerList" :key="img"><img :src="img" alt=""></mt-swipe-item>
+        <!-- <mt-swipe-item class="swipe-item"><img src="img/home/banner-2.png" alt=""></mt-swipe-item> -->
       </mt-swipe>
     </div>
     <div class="section">
@@ -74,7 +72,7 @@
           <h4>专业及安全</h4>
           <h5>PORFESSIONAL</h5>
         </div>
-        <div class="section-about-item">
+        <div class="section-about-item" @click="goPage('event')">
           <img src="../assets/section-about-bg-3.png" alt="" class="section-about-item-img">
           <h4>最新活动</h4>
           <h5>LATEST EVENTS</h5>
@@ -145,12 +143,15 @@
 <script>
 // import { Toast } from 'mint-ui';
 import router from '@/router';
-
+import navbar from '../components/head'
 
 export default {
+  components:{
+    navbar
+  },
   data() {
     return {
-
+      bannerList: this.jsonData.homeBanner
     }
   },
   methods: {
@@ -161,7 +162,11 @@ export default {
     }
   },
   mounted() {
-    // Toast('Hello world!');
+    const banner = window.localStorage.getItem('banner')
+    // console.log(JSON.parse(banner).homeBanner)
+    if(event&&!this.jsonData.homeBanner) {
+      this.bannerList = JSON.parse(banner).homeBanner
+    }
   }
 }
 </script>

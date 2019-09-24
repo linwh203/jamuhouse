@@ -1,12 +1,14 @@
 <template>
   <div class="home">
-    <div class="logo flex-center">
+    <navbar hide="course1"/>
+    <!-- <div class="logo flex-center">
       <img src="../assets/logo.png" alt="">
-    </div>
+    </div> -->
     <div class="swipe">
       <mt-swipe :auto="3000">
-        <mt-swipe-item class="swipe-item"><img src="../assets/coursebanner-1.png" alt=""></mt-swipe-item>
-        <mt-swipe-item class="swipe-item"><img src="../assets/coursebanner-2.png" alt=""></mt-swipe-item>
+        <mt-swipe-item class="swipe-item" v-for="img in bannerList" :key="img"><img :src="img" alt=""></mt-swipe-item>
+        <!-- <mt-swipe-item class="swipe-item"><img src="img/course1/coursebanner-1.png" alt=""></mt-swipe-item>
+        <mt-swipe-item class="swipe-item"><img src="img/course1/coursebanner-2.png" alt=""></mt-swipe-item> -->
       </mt-swipe>
     </div>
     <div class="section">
@@ -20,8 +22,17 @@
 <script>
 // import { Toast } from 'mint-ui';
 import router from '@/router';
+import navbar from '../components/head'
 
 export default {
+  components:{
+    navbar
+  },
+  data() {
+    return {
+      bannerList: this.jsonData.courseOneBanner
+    }
+  },
   methods: {
     goPage(name) {
       router.push({
